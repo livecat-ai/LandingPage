@@ -37,12 +37,20 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.1);
 }
 
 p {
     line-height: 1.6em;
-    color: #eee;
+    color: rgba(233, 233, 233, 0.2);
+}
+
+.active h2 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.active p { 
+    color: rgba(233, 233, 233, 1);
 }
 
 /* ---- Layout Rules ---- */
@@ -57,7 +65,7 @@ main {
 
 section {
     position: relative;
-    min-height: 80vh;
+    min-height: 80vh;  
 }
 
 
@@ -72,6 +80,7 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    color: rgb(0, 0, 0);
 }
 
 .navbar__menu .menu__link {
@@ -85,6 +94,12 @@ section {
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
+    transition: ease 0.3s all;
+}
+
+.navbar__menu .menu__link:active {
+    background: hsl(246, 100%, 48%);
+    color: rgb(255, 0, 0);
     transition: ease 0.3s all;
 }
 
@@ -122,6 +137,8 @@ section {
         padding: 4em;
     }
 }
+
+
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
@@ -193,17 +210,17 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
