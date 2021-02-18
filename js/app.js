@@ -84,6 +84,7 @@ function addNavBarItems() {
 }
 
 function menuClickEventCallback(event) {
+    event.preventDefault();
     if (event.target.nodeName === "A") {
         const dataNav = event.target.textContent;
         for (section of sectionElements) {
