@@ -22,9 +22,10 @@ body {
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 2em 1rem;
 }
+
 
 @media only screen and (min-width: 35em){
     h1 {
@@ -36,7 +37,7 @@ h1 {
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
+    font-size: 2em;
     color: rgba(255, 255, 255, 0.1);
 }
 
@@ -72,6 +73,11 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: .7em;
+}
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -138,7 +144,9 @@ section {
     }
 }
 
-
+section {
+    font-size: 0.8em;
+}
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
@@ -238,3 +246,53 @@ section.active .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+
+/* Responsive Adjustments */
+
+
+@media only screen and (min-width: 599px ) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .navbar__menu {
+        font-size: 1em;
+    }
+
+    section {
+        font-size: 1em;
+    }
+
+@media only screen and (min-width: 1000px) {
+    .navbar__menu {
+        font-size: 1.3em;
+    }
+
+@media only screen and (min-width: 1300px) {
+    h1 {
+        font-size: 4em;
+        /* padding: 1em; */
+    }
+
+    .navbar__menu {
+        font-size: 2em;
+    }
+
+    section {
+        font-size: 1.3em;
+    }
+
+@media only screen and (min-width: 1700px) {
+    h1 {
+        font-size: 6em;
+        /* padding: 1em; */
+    }
+
+    .navbar__menu {
+        font-size: 2.5em;
+    }
+
+    section {
+        font-size: 1.7em;
+    }
