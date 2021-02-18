@@ -101,7 +101,7 @@ function menuClickEventCallback(event) {
 
 
 // Add class 'active' to section when near top of viewport
-function setActiveSection(event) {
+function setActiveSectionCallback(event) {
     const activeNow = document.querySelector('.active');
     const inView = getSectionInView();
     if (activeNow != inView) {
@@ -127,4 +127,4 @@ navBar.addEventListener('click', menuClickEventCallback);
 
 // Set sections as active
 const main = document.querySelector("main");
-window.addEventListener('scroll', setActiveSection);
+window.addEventListener('scroll', setActiveSectionCallback);
