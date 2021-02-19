@@ -89,10 +89,14 @@ function menuClickEventCallback(event) {
         const dataNav = event.target.textContent;
         for (section of sectionElements) {
             if (dataNav === "Home") {
-                window.scrollTo(0, 0);
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                  });
             }
             else if (section.dataset.nav === dataNav) {
-                section.scrollIntoView(true);
+                section.scrollIntoView({behavior: "smooth"});
             }
         }
     }
